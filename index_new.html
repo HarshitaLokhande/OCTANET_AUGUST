@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url('https://cdn.wallpapersafari.com/45/90/Qe7lcd.jpg');
+            background-size: cover;
+            background-position: top;
+        }
+        header{
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: transparent;
+        }
+        header .container{
+            height: 10vh;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+        .logo{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .logo img{
+            
+            height: 150px;
+            width: 150px;
+        }
+        .logo p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-weight: 500px;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: wheat;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            font-size: 30px;
+            list-style: none;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17px;
+        }
+        .main{
+            width: 100%;
+            height: 90vh;
+            position: absolute;
+        }
+        .main img{
+            display: block;
+            margin: auto;
+            height: 85%;
+            filter: drop-shadow(20px 20px 40px black);
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .content .container{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            margin: auto;
+            height: 100%;
+        }
+        .todo{
+            cursor: url('https://media.baamboozle.com/uploads/images/771744/1654778814_49011.png')6 19,auto;
+            display: flex;
+            padding: 14px;
+        }
+        .todo_value{
+            cursor: inherit;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
+            font-weight: bold;
+            flex-grow: 1;
+            border-bottom: 2px solid rgb(241, 45, 45);
+        }
+        .todo_checkbox{
+            cursor: inherit;
+        }
+        .todo:has(.todo_checkbox:checked){
+            color: rgb(240, 104, 104);
+            background: rgb(237, 122, 237);
+            text-decoration: line-through 1.5px;
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="https://clipartspub.com/images600_/to-do-list-clipart-logo-2.png">
+                <p>ToDo List</p>
+            </div>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="#"><li>Sign in</li></a>
+                <a href="#"><li>Contact Us</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <img src="https://media.istockphoto.com/photos/scroll-isolated-on-white-picture-id171258277?b=1&k=20&m=171258277&s=170667a&w=0&h=XqnvuH5ckXNI5Xv4aw26q4JpGO9JMWguUoN1q2c0Hl8=">
+        <div class="content">
+            <div class="container">
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+                <div class="todo">
+                    <input class="todo_value" type="text" placeholder="(empty)">
+                    <input class="todo_checkbox" type="checkbox">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
