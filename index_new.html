@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             background-image: url('https://cdn.wallpapersafari.com/45/90/Qe7lcd.jpg');
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
         }
-        header{
+
+        header {
             width: 100%;
             position: sticky;
             top: 0;
             z-index: 1;
             background: transparent;
         }
-        header .container{
+
+        header .container {
             height: 10vh;
             width: 100%;
             margin: 0 auto;
             padding: 0 50px;
         }
-        .logo{
+
+        .logo {
             display: flex;
             gap: 15px;
             align-items: center;
         }
-        .logo img{
-            
+
+        .logo img {
+
             height: 150px;
             width: 150px;
         }
-        .logo p{
+
+        .logo p {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 30px;
             font-weight: 500px;
             cursor: pointer;
         }
-        a{
+
+        a {
             text-decoration: none;
-            color: wheat;
+            color: rgb(234, 169, 48);
         }
-        ul{
+
+        ul {
             display: flex;
             gap: 30px;
             font-size: 30px;
             list-style: none;
         }
-        nav{
+
+        nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 17px;
         }
-        .main{
+
+        .main {
             width: 100%;
             height: 90vh;
             position: absolute;
         }
-        .main img{
+
+        .main img {
             display: block;
             margin: auto;
-            height: 85%;
-            filter: drop-shadow(20px 20px 40px black);
+            height: 75%;
+            filter: drop-shadow(20px 20px 40px rgb(79, 75, 75));
+            margin-top: 100px;
+            border-radius: 23px;
         }
-        .content{
+
+        .content {
             width: 100%;
             height: 100%;
             display: block;
@@ -81,7 +96,8 @@
             top: 0;
             left: 0;
         }
-        .content .container{
+
+        .content .container {
             justify-content: center;
             display: flex;
             flex-direction: column;
@@ -89,12 +105,14 @@
             margin: auto;
             height: 100%;
         }
-        .todo{
-            cursor: url('https://media.baamboozle.com/uploads/images/771744/1654778814_49011.png')6 19,auto;
+
+        .todo {
+            cursor: url('https://media.baamboozle.com/uploads/images/771744/1654778814_49011.png')6 19, auto;
             display: flex;
             padding: 14px;
         }
-        .todo_value{
+
+        .todo_value {
             cursor: inherit;
             background: transparent;
             border: none;
@@ -103,17 +121,20 @@
             font-size: 15px;
             font-weight: bold;
             flex-grow: 1;
-            border-bottom: 2px solid rgb(241, 45, 45);
+            border-bottom: 2px solid rgb(243, 33, 204);
         }
-        .todo_checkbox{
+
+        .todo_checkbox {
             cursor: inherit;
         }
-        .todo:has(.todo_checkbox:checked){
+
+        .todo:has(.todo_checkbox:checked) {
             color: rgb(240, 104, 104);
-            background: rgb(237, 122, 237);
+            background: rgb(230, 169, 230);
             text-decoration: line-through 1.5px;
             order: 1;
         }
+
         @media (min-width: 768px) and (max-width: 1024px) {
             .logo img {
                 height: 80px;
@@ -130,83 +151,89 @@
             }
 
             .main img {
-                height: 60%; 
+                height: 60%;
             }
 
             .content {
-                padding: 15px; 
+                padding: 15px;
             }
 
             .todo {
-                font-size: 16px; 
+                font-size: 16px;
             }
         }
-        
-       
-@media (max-width: 768px) {
-    html, body {
-        height: 100%;
-        margin: 0;
-    }
 
-    body {
-        background-image: url('https://cdn.wallpapersafari.com/45/90/Qe7lcd.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+        @media (max-width: 768px) {
 
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative;
-    }
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+            }
 
-    .main img {
-        max-height: 70%;
-        max-width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    }
+            body {
+                background-image: url('https://cdn.wallpapersafari.com/45/90/Qe7lcd.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
 
-    .content {
-        position: relative;
-        z-index: 2;
-        width: 90%;
-        max-width: 400px;
-        padding: 10px;
-    }
+            .main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                position: relative;
+            }
 
-    .todo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-        background: transparent;
-        margin-bottom: 8px;
-        border-radius: 5px;
-    }
+            .main img {
+                max-height: 70%;
+                max-width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                
+            }
 
-    .todo_value {
-        font-size: 12px;
-        border-bottom: 2px solid rgb(101, 250, 32);
-        flex-grow: 1;
-        margin-right: 8px;
-        background: transparent;
-    }
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 90%;
+                max-width: 400px;
+                padding: 10px;
+            }
 
-    .todo_checkbox {
-        cursor: pointer;
-    }
-}
+            .todo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+                background: transparent;
+                margin-bottom: 8px;
+                border-radius: 5px;
+            }
+
+            .todo_value {
+                font-size: 12px;
+                border-bottom: 2px solid rgb(101, 250, 32);
+                flex-grow: 1;
+                margin-right: 8px;
+                background: transparent;
+            }
+
+            .todo_checkbox {
+                cursor: pointer;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -215,14 +242,20 @@
                 <p>ToDo List</p>
             </div>
             <ul>
-                <a href="index_new.html"><li>Home</li></a>
-                <a href="#"><li>Sign in</li></a>
-                <a href="#"><li>Contact Us</li></a>
+                <a href="index_new.html">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Sign in</li>
+                </a>
+                <a href="#">
+                    <li>Contact Us</li>
+                </a>
             </ul>
         </nav>
     </header>
     <div class="main">
-        <img src="https://media.istockphoto.com/photos/scroll-isolated-on-white-picture-id171258277?b=1&k=20&m=171258277&s=170667a&w=0&h=XqnvuH5ckXNI5Xv4aw26q4JpGO9JMWguUoN1q2c0Hl8=">
+        <img src="https://th.bing.com/th/id/OIP.ti3xB_-ubtrF_2YFCIgmHAHaHa?rs=1&pid=ImgDetMain">
         <div class="content">
             <div class="container">
                 <div class="todo">
@@ -253,4 +286,5 @@
         </div>
     </div>
 </body>
+
 </html>
