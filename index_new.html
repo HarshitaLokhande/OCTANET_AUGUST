@@ -142,98 +142,66 @@
             }
         }
         
-        @media (max-width: 768px) and (min-width: 370px){
-            .logo img {
-                height: 60px;
-                width: 60px;
-            }
-
-            .logo p {
-                font-size: 18px;
-            }
-
-            ul {
-                font-size: 16px;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .main img {
-                height: 50%; 
-            }
-
-            .content {
-                padding: 10px; 
-            }
-
-            .todo {
-                font-size: 14px; 
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .todo_value {
-                font-size: 14px;
-            }
+       @media (max-width: 768px) {
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
         }
-        
-        @media (max-width: 370px) {
-            body {
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 100vh;
-            }
-
-            .main {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                position: relative;
-            }
-
-            .main img {
-                height: 80%; 
-                max-width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 1;
-            }
-
-            .content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2; /* Make sure the form elements are above the scroll image */
-                width: 90%;
-                padding: 10px;
-            }
-
-            .todo {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                padding: 14px;
-                background: rgba(255, 255, 255, 0.8); /* Slight background to ensure readability */
-                border-radius: 5px;
-                margin-bottom: 10px;
-            }
-
-            .todo_value {
-                font-size: 12px;
-                border-bottom: 2px solid rgb(241, 45, 45);
-                flex-grow: 1;
-                margin-right: 10px;
-                background: transparent;
-            }
-
-            .todo_checkbox {
-                cursor: pointer;
-            }
+    
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+    
+        .main img {
+            max-height: 70%; /* Adjust as needed */
+            max-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2; /* Ensure it's above the image */
+            width: 90%;
+            max-width: 400px; /* Adjust width */
+            padding: 10px;
+        }
+    
+        .todo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9); /* Ensure readability */
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+    
+        .todo_value {
+            font-size: 12px;
+            border-bottom: 2px solid rgb(241, 45, 45);
+            flex-grow: 1;
+            margin-right: 8px;
+            background: transparent;
+        }
+    
+        .todo_checkbox {
+            cursor: pointer;
+        }
 }
            
     </style>
