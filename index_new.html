@@ -173,9 +173,9 @@
 
             body {
                 background-image: url('https://cdn.wallpapersafari.com/45/90/Qe7lcd.jpg');
-                background-size: cover;
+                background-size: auto 100%;
                 background-position: center;
-                background-repeat: no-repeat;
+                background-repeat: repeat-y;
             }
 
             .main {
@@ -194,18 +194,19 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
-                
             }
 
             .content {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                position: relative;
                 z-index: 2;
                 width: 90%;
                 max-width: 400px;
                 padding: 10px;
+            }
+
+            ul a {
+                color: black;
+                /* Change navigation link color to black */
             }
 
             .todo {
